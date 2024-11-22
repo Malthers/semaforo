@@ -26,19 +26,19 @@ function fManual () {
 function fDesligado () {
     if (manual.textContent.trim() == 'Verde' || 'Amarelo' || 'Vermelho') {
         auto.textContent = 'Desligar';
+        
     } 
-    else {
-        auto.textContent = 'Automático';
-    }
+    
     
 }
 
 function fAuto () {
     
     if (auto.textContent.trim() == 'Automático') {
-        auto.textContent = 'Desligar';
+        fDesligado()
     }
     else {
+        manual.textContent = 'Ligar';
         auto.textContent = 'Automático';
     }
     
